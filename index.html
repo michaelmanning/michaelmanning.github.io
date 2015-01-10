@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
-    <title>Michael Manning</title>
-    <meta name="description" content="Home page for Michael Manning, engineering student at Brown University.">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+        <title>Michael Manning</title>
+        <meta name="description" content="Home page for Michael Manning, engineering student at Brown University.">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+<div id="construction"><center>This site is under construction. Check back soon!</center></div>
+        <header>
 
-</head>
-<body>
-    
-<h1 style="text-align: center">Michael Manning</h1>
-<p style="margin: auto; text-align: center; max-width: 450px">Hi! This page is under construction. Check back soon! In the meantime, I can be contacted at michael_manning at brown dot edu.</p>        
-</body>
+            <h1 id="me">Michael Manning</h1>
+            <p id="vCard"><a href="https://drive.google.com/uc?export=download&amp;id=0B6SOD08sypI9TTY5S09SXzlyYkk">Download Contact Info. (vCard)</a></p>
+
+            <div id="social">
+                <a href="https://www.linkedin.com/in/mrmanning/"><img src="img/ico/social/linkedin.png" alt=""></a>
+                <a href="https://www.facebook.com/MichaelManningR"><img src="img/ico/social/facebook.png" alt=""></a>
+                <a href="https://twitter.com/MichaelManningR"><img src="img/ico/social/twitter.png" alt=""></a>
+            </div>
+
+            <div id="menu">
+                <nav id="nav">
+                    <ul class="horiz_table"> <!--# for id-->
+                        <li><a href="#who">Who I Am</a></li>
+                        <li><a href="#what">What I Do</a></li>
+                        <li><a href="#work">My Work</a></li>
+                        <li><a href="#resume">Résumé</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div id="fixed_header">
+            <nav id="nav">
+                <ul class="horiz_table"> <!--# for id-->
+                    <li><a href="#who">Who I Am</a></li>
+                    <li><a href="#what">What I Do</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#resume">Résumé</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br id="top_break"> <!--super important so the pag doesn't look ugly on mobile-->
+        <section id="who">
+            <h2>Who I am.</h2>
+            <div class="content">
+                <p>I am an engineering student at Brown University with broad life experience and a diverse set of interests. I have a penchant for tinkering and a passion for improving the world and taking in as much of it as I can. I aspire to have a lasting, sustainable impact on the world through my work. </p>
+            </div>
+        </section>
+
+        <section id="what">
+            <h2>What I do.</h2>
+            <div class="content">
+                <p>I am in my sophomore year exploring different engineering tracks, but am primarily choosing between mechanical and electrical engineering. I have a passion for socially conscious engineering and sustainable enrgy. Right now, I split my time between class, rugby, being a Residential Peer Leader, working in the Brown Design Workshop, and building a CNC milling machine.</p>
+            </div>
+
+
+
+        </section>
+
+        <section id="work">
+                <h2>Work I've done.</h2>
+                        <div class="container">
+                <div class="content" id="current_work">
+                    <h3>Current Work</h3>
+                    <p>I am currently working on a CNC milling machine with a small group of peers. We plan to build the machine and develop a CAM software package that is user firendly, intuitive, and easy to learn. The software is being developed using <a href="http://www.opencascade.org/">openCASCADE</a>, a software development kit intended for development of applications dealing with 3D CAD data.</p>
+                </div>
+                <div class="content" id="past_work" style="position: fixed; visibility: hidden;"> <!--to hide until later-->
+                    <h3>Past Work</h3>
+                    <ul>
+                        <il><a href=""></a></il>
+                        <il><a href=""></a></il>
+                        <il><a href=""></a></il>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Résumé</h2>
+            <div class="content">
+                <ul class="horiz_table" id="resume_formats">
+                    <li><a href="files/resumes/resume.pdf"><img src="img/ico/pdf_ico.png" alt=""></a></li>
+                    <li><a href="files/resumes/resume.docx"><img src="img/ico/docx_ico.png" alt=""></a></li>
+                    <li><a href="files/resumes/resume.html"><img src="img/ico/html_ico.png" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <h2 id="contact_title" style="background:inherit">Contact Me</h2>
+            <div class="content">
+                <div id="contact">
+                    <form action="http://formspree.io/mmanning720@gmail.com" method="POST">
+                        <input type="text" name="_gotcha" style="display:none" /> <!--No bots allowed-->
+                        <input type="hidden" name="_subject" value="[Contact Form - mrmanning.me]" />
+                        <input class="input" type="text" name="name" placeholder="Your name" /><br>
+                        <input class="input" type="text" name="_replyto" placeholder="Your email" /><br>
+                        <textarea class="input" name="message" placeholder="Your message here."></textarea>
+                        <input type="hidden" name="_next" value="//mrmanning.me/index.html#footer" /><br>
+                        <!--//TODO find a better way to do this.
+//TODO Clear form on submit-->
+                        <input id="submit" type="submit" value="Send">
+                    </form>
+                </div>
+                <p id="copyright">&copy; Michael Manning 2015. All Rights Reserved. <a href="sources.html">Sources</a></p>
+            </div>
+        </footer>
+
+    </body>
 </html>
