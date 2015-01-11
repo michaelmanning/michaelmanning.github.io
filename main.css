@@ -13,13 +13,16 @@ article, aside, figure, footer, header, nav, section, details, summary {display:
 
 /* addressing mobile design first */
 
+html {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
 body {font: 1.1em 'Open Sans', Helmet, Freesans, sans-serif;}
 input, select, textarea, button{font: inherit;}
 
-/* Using local fonts? Check out Font Squirrel's webfont generator: http://www.fontsquirrel.com/tools/webfont-generator */
-
-/* We like off-black for text. */
-body, select, input, textarea {color: #333;}
+body, select, input, textarea {color: #555;}
 
 
 
@@ -36,17 +39,12 @@ input:-moz-placeholder { color:#a9a9a9; }
 textarea:-moz-placeholder { color:#a9a9a9; }
 
 #construction {
-
+    background-color: #fff;
 }
 
 #fixed_header {
     position: fixed;
     visibility: hidden;
-    /* to be put in desktop portion
-    width: 100%
-    background-color: #fff;
-    border-bottom: .5em #000;
-    */
 }
 
 a {
@@ -61,18 +59,27 @@ a {
 }
 
 a:hover {
-    -webkit-filter: opacity(0.6);
-}
-
-#menu {
-    position: fixed;
-    visibility: hidden;
+    -webkit-filter: opacity(0.8);
 }
 
 header {
+    position: relative;
     background-color: #111;
     color: #fff;
-    padding: 2em;
+}
+
+nav {
+    position: absolute;
+    visibility: hidden;
+}
+
+.next {
+    position: absolute;
+    visibility: hidden;
+}
+
+#h_content {
+    padding-top: 0%;
     text-align: center;
 }
 
@@ -94,9 +101,8 @@ header {
     -webkit-filter: opacity(0.6);
 }
 
+/* main content of the page */
 
-section {
-}
 
 h2 {
     padding: .3em 3%;
@@ -113,44 +119,53 @@ h3 {
 }
 
 .container {
+    padding-top: 2vh;
     width: 100%;
 }
+
 .content {
     padding: 1em 3%;
     text-align: justify;
 }
 
-.horiz_table {
-    margin-left: 0em;
-    margin-right: auto;
+#resume_content {
+    display: flex;
+    flex-wrap: nowrap;
     text-align: center;
 }
-.horiz_table li {
-    display: inline-block;
-    padding: 0% 5%;
-    vertical-align: middle;
-    width: 22.4%;
+
+#resume_content li {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0%;
+    width: 30%;
+
 }
 
-
-#resume img{
-    display: inline;
+#resume_content img{
     width: 100%;
 }
 
+/* Footer */
 footer {
     color: #fff;
     background-color: #555;
 }
 
+#contact {
+    margin-top: 4%;
+    margin-left: 1%;
+    margin-bottom: 0.5em;
+}
+
 .input {
     margin-bottom: .5em;
-    padding: .2em;
+    padding: 0.2em;
     border-style: solid;
     border-width: thin;
     border-color: #292929;
     border-radius: .2em;
-    width: 98%
+    width: 97%
 }
 
 #submit {
@@ -166,6 +181,14 @@ footer {
     background-color: #bfbfbf;
 }
 
+#footer_social img {
+    width: 0px;
+}
+#footer_social {
+    position: absolute;
+    visibility: hidden;
+}
+
 #copyright {
     text-align: center;
 }
@@ -174,11 +197,191 @@ footer {
 -------------------------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
 
+    .white_text {
+    color: #fff;
+    }
+    body {font-size: 1.7em}
     a:hover {color: #868686;}		
 
-
-    .horiz_table li {
-        max-width: 160px;
+    section, header {
+        position: relative;
+        height: 100vh;
+    }
+    header {
+        min-height: 18em;
+    }
+    section {
+        min-height: 24.5em;
+    }
+    .next {
+        visibility: visible;
+        width: 100%;
+        bottom: 2%;
+        text-align: center;
+        vertical-align: bottom;
     }
 
+    header {
+        background-color: #000;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg/header_bg.jpeg);
+        background-size: cover;
+        background-position: center;
+
+    }
+    #h_content {
+        padding-top: 20vh;
+    }
+
+    #me {
+        font-size: 2.4em;
+        font-weight: 300;
+    }
+
+    #menu {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        margin-top: 10vh;
+    }
+
+    nav {
+        position: relative;
+        visibility: visible;
+    }
+
+    nav ul {
+        position: relative;
+        padding: 1% 0%;
+        white-space: nowrap;
+
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 0% 1%;
+        margin: 0%;
+        font-weight: 300;
+    }
+
+    #fixed_header {
+        visibility: visible;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: .5em #000;
+    }
+
+
+    /* main content */
+
+    section {
+    }
+
+    .container {
+        padding-top: 10vh;
+        width: 100%;
+    }
+    .content {
+        margin-top: 10vh;
+        margin-left: 25%;
+        padding: 3%;
+
+        background: #fff;
+        background: rgba(255,255,255,0.8);
+    }
+
+    #who {
+        background-color: #000;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255,255, 0.5)), url(img/bg/who_bg.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    #what {
+        background-color: #000;
+        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255,255, 0)), url(img/bg/what_bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    #work {
+        background-color: #000;
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255,255, 0)), url(img/bg/work_bg.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    #resume {
+        background-color: #000;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), url(img/bg/resume_bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #resume_content {
+        margin-top: 15vh;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 5% 0%;
+        justify-content: center;
+        background: #fff;
+        background: rgba(255,255,255,0.8);
+    }
+    #resume_content img{
+        max-width: 215px;
+    }
+    /* footer */
+
+    footer {
+        background-color: #555;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg/footer_bg.jpg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    #contact-title {
+        background: none;
+    }
+
+    #f_content {
+        display: flex;
+    }
+
+    #contact {
+        margin-top: 4%;
+        margin-left: 10%;
+        margin-bottom: 4%;
+        width: 60%;
+    }
+
+    .input {
+        margin-bottom: 1em;
+        padding: .4em;
+        border-style: solid;
+        border-width: thin;
+        border-color: #292929;
+        border-radius: .2em;
+        width: 97%;
+    }
+
+    #footer_social {
+        visibility: visible;
+        margin-top: 4%;
+        margin-left: 10%;
+    }
+
+    #footer_social a img {
+        width: 2.5em;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+
+    #footer_social a img:hover {
+        -webkit-filter: opacity(0.6);
+    }
+    #submit {
+        padding: .6em 3em;
+        background: #fff;
+        border-style: solid;
+        border-width: thin;
+        border-color: #292929;
+        border-radius: .2em;
+    }
 }
