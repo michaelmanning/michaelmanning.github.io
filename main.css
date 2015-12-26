@@ -128,23 +128,6 @@ h3 {
     text-align: justify;
 }
 
-#resume_content {
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-}
-
-#resume_content li {
-    display: inline-flex;
-    list-style-type: none;
-    margin: 0%;
-    width: 30%;
-
-}
-
-#resume_content img{
-    width: 100%;
-}
 
 /* Footer */
 footer {
@@ -200,7 +183,9 @@ footer {
     .white_text {
     color: #fff;
     }
-    body {font-size: 1.7em}
+    body {font-size: 1.7em;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/construction_bg.jpeg);
+    }
     a:hover {color: #868686;}		
 
     section, header {
@@ -223,8 +208,8 @@ footer {
 
     header {
         background-color: #000;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/bg/header_bg.jpeg);
-        background-size: cover;
+        background: transparent;
+        background-size: auto;
         background-position: center;
 
     }
@@ -241,6 +226,7 @@ footer {
         width: 100%;
         background: rgba(255, 255, 255, 0.4);
         margin-top: 10vh;
+        font-size: 0.8em;
     }
 
     nav {
@@ -251,7 +237,6 @@ footer {
     nav ul {
         position: relative;
         padding: 1% 0%;
-        white-space: nowrap;
 
     }
 
@@ -270,66 +255,11 @@ footer {
     }
 
 
-    /* main content */
-
-    section {
-    }
-
-    .container {
-        padding-top: 10vh;
-        width: 100%;
-    }
-    .content {
-        margin-top: 10vh;
-        margin-left: 25%;
-        padding: 3%;
-
-        background: #fff;
-        background: rgba(255,255,255,0.8);
-    }
-
-    #who {
-        background-color: #000;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255,255, 0.5)), url(img/bg/who_bg.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-    #what {
-        background-color: #000;
-        background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255,255, 0)), url(img/bg/what_bg.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-    #work {
-        background-color: #000;
-        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255,255, 0)), url(img/bg/work_bg.jpeg);
-        background-size: cover;
-        background-position: center;
-    }
-    #resume {
-        background-color: #000;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2)), url(img/bg/resume_bg.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    #resume_content {
-        margin-top: 10vh;
-        margin-left: 20%;
-        margin-right: 20%;
-        padding: 5% 0%;
-        justify-content: center;
-        background: #fff;
-        background: rgba(255,255,255,0.8);
-    }
-    #resume_content img{
-        max-width: 215px;
-    }
     /* footer */
 
     footer {
-        background-color: #555;
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg/footer_bg.jpg);
+        margin-top: 2em;
+        background: transparent;
         background-size: cover;
         background-position: bottom;
     }
